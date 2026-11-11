@@ -1,12 +1,12 @@
-#SENARYO:ECZANE YÖNETİM VE STOK TAKİP SİSTEMİ
-#çalışanların tutulan bilgileri
+--SENARYO:ECZANE YÖNETİM VE STOK TAKİP SİSTEMİ
+--çalışanların tutulan bilgileri
 CREATE TABLE employee(
   employee_no int Primary key,
   full_name VARCHAR(100),
   hire_date DATE, 
   job_title VARCHAR(50)
   );
-#ilaçlara ait bilgiler
+--ilaçlara ait bilgiler
 CREATE TABLE medicine(
   serial_no int Primary key,
   medicine_name VARCHAR(100)
@@ -14,18 +14,18 @@ CREATE TABLE medicine(
   category VARCHAR(50),
   expiration_date DATE
   );
-#tedarikçi bilgileri
+--tedarikçi bilgileri
 CREATE TABLE supplier(
   supplier_no int Primary key,
   company_info VARCHAR(200)
   );
-#müşteri bilgileri
+--müşteri bilgileri
 CREATE TABLE customer(
   national_id_number int Primary key,
   full_name VARCHAR(100)
   birth_date DATE
   );
-#reçete bilgisi
+--reçete bilgisi
  CREATE TABLE prescription(
   prescription_no int Primary key,
   issue_date DATE
@@ -34,7 +34,7 @@ CREATE TABLE customer(
    FOREIGN KEY (national_id_number)
    REFERENCES customer(national_id_number)
   );
-#çalışanlarla ilaçlar arasıdaki ilişki
+--çalışanlarla ilaçlar arasıdaki ilişki
 CREATE TABLE employee_medicine(
   employee_no int,
   serial_no int,
@@ -48,7 +48,7 @@ CREATE TABLE employee_medicine(
   FOREIGN KEY (serial_no)
   REFERENCES medicine(serial_no)
   );
-#reçete ve ilaçlar arasındaki ilişki
+--reçete ve ilaçlar arasındaki ilişki
 CREATE TABLE prescription_medicine(
   prescription_no int,
   serial_no int,
@@ -61,7 +61,7 @@ CREATE TABLE prescription_medicine(
   FOREIGN KEY(serial_no)
   REFERENCES medicine(serial_no)
 );
-#ilaçlar ve tedarikçiler arasındaki ilişki
+--ilaçlar ve tedarikçiler arasındaki ilişki
 CREATE TABLE medicine_supplier(
   serial_no int,
   supplier_no int,
