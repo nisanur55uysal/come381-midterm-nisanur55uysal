@@ -42,3 +42,6 @@ MEDICINE_SUPPLIER{
     int supplier_no PK,FK}
 MEDICINE||--o{ MEDICINE_SUPPLIER: has_medicine
 SUPPLIER||--o{ MEDICINE_SUPPLIER:has_supplier
+AÇIKLAMA: 
+Eczanelerin takip işlemleri karışık geldiği için böyle bir senaryo tercih ettim. Alt sınıf açtım ve birden fazla ilişki kurdum. 
+Varlıklara uygun nitelikler buldum ve bunları da diyagramda gösterdim. Her kısımda pk olmasına özen gösterdim.
