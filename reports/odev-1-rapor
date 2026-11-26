@@ -1,0 +1,22 @@
+Nisanur Uysal - 202502009068 - YBS
+
+1)Ne yaptım:
+İlk olarak veri tabanı kullanımına en çok ihtiyaç duyduğunu düşündüğüm eczane yönetimi sistemi hakkında araştırmalar 
+yaptım ve senaryomu kurdum. Oluşturacağım diyagramdaki varlıkları, nitelikleri, ilişkileri P.k ve F.k'ları belirledim. 
+Bir taslak şema çizdim.Daha sonra bu şemadan yola çıkarak mermaid kodumu oluşturdum. En son oluşturduğum kodu 
+shema.sql isimli dosyaya ekledim. Senaryomu da docs adlı klasöre ekleyip ödevimi tamamladım
+
+2)En önemli iki karar ve gerekçesi:
+karar 1) 3 tane M:N, 1 tane 1:N ilişkisi oluşturdum. İlk M:N ilişkisinde bir çalışan birden fazla ilaç satabilir ve 
+bir ilacı birden fazla çalışan satabilir. İkincisinde bir ilaç birden fazla tedarikçiden alınabilir ve bir tedarikçi 
+birden fazla ilaç sağlayabilir. üçüncü de bir ilaç birden fazla reçeteye yazılabilir ve bir reçetede birden fazla ilaç yazabilir.
+1:N ilişkisinde ise reçete bir kişiye yazılabilir fakat bir kişiye birden fazla reçete yazılabilir.
+
+3)Beklemediğim şey/yaptığım hata:
+P.k ve f.k seçiminde yanlışlıklar yaptım.
+
+4)Yapay zeka kullanımı:
+Mermaid kodunu yazarken yapay zekadan yardım aldım.
+
+5)Öz kontrol:
+Ödevimi tamamladım.
