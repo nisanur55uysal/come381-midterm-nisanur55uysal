@@ -1,1 +1,92 @@
+--Q1:Fiyatı 30 TL ve üzeri olan ürünleri büyükten küçüğe sırala.
+       name       | price
+------------------+-------
+ Club Sandviç     | 90.00
+ Cheesecake       | 85.00
+ Tost             | 70.00
+ Latte            | 60.00
+ Limonata         | 40.00
+ Türk Kahvesi     | 35.00
+ Buzlu Çay        | 30.00
+(7 rows)
 
+--Q2: Her müşterinin kaç sipariş verdiğini müşteri bilgileriyle birlikte listele.
+ customer_id |   full_name   | department |      phone      | age | siparis_sayisi
+-------------+---------------+-----------+-----------------+-----+---------------
+ 1           | Ayşe Demir    | YBS       | 0532 000 00 01  | 20  | 3
+ 2           | Mehmet Kaya   | YBS       | NULL            | 21  | 2
+ 3           | Elif Yıldız   | YBS       | 0532 000 00 03  | NULL| 2
+ 4           | Can Arslan    | İşletme   | NULL            | NULL| 1
+ 5           | Zeynep Aksoy  | İşletme   | 0532 000 00 05  | 22  | 2
+ 6           | Burak Çelik   | Hukuk     | 0532 000 00 06  | 19  | 1
+ 7           | Selin Öztürk  | Psikoloji | NULL            | 23  | 1
+ 8           | Emre Şahin    | YBS       | 0532 000 00 08  | 20  | 0
+(8 rows)
+
+--Q3: Ürünleri kategorilerine ve sipariş sayılarına göre listele.
+       name       |    category    | siparis_sayisi
+------------------+---------------+---------------
+ Club Sandviç     | Sandviç       | 3
+ Tost             | Sandviç       | 3
+ Buzlu Çay        | Soğuk İçecek  | 2
+ Limonata         | Soğuk İçecek  | 3
+ Çay              | Sıcak İçecek  | 3
+ Latte            | Sıcak İçecek  | 4
+ Türk Kahvesi     | Sıcak İçecek  | 3
+ Cheesecake       | Tatlı         | 4
+(8 rows)
+
+--Q4: Siparişlerin numarasını, müşteri kodunu ve sipariş tarihini listele.
+ order_id | customer_id | order_date
+----------+-------------+------------
+ 1        | 1           | 2026-11-02
+ 2        | 2           | 2026-11-02
+ 3        | 1           | 2026-11-03
+ 4        | 3           | 2026-11-04
+ 5        | 4           | 2026-11-05
+ 6        | 5           | 2026-11-05
+ 7        | 1           | 2026-11-09
+ 8        | 6           | 2026-11-10
+ 9        | 2           | 2026-11-11
+ 10       | 7           | 2026-11-12
+ 11       | 3           | 2026-11-16
+ 12       | 5           | 2026-11-17
+(12 rows)
+
+--Q5: Sipariş kalemlerini ürün adı ve adedine göre listele.
+       name       | quantity
+------------------+----------
+ Cheesecake       | 1
+ Latte            | 1
+ Çay              | 2
+ Tost             | 1
+ Buzlu Çay        | 1
+ Türk Kahvesi     | 1
+ Club Sandviç     | 1
+ Limonata         | 1
+ Cheesecake       | 2
+ Çay              | 1
+ Latte            | 2
+ Tost             | 1
+ Club Sandviç     | 1
+ Limonata         | 2
+ Cheesecake       | 1
+ Türk Kahvesi     | 1
+ Buzlu Çay        | 2
+ Latte            | 1
+ Çay              | 1
+ Limonata         | 1
+ Tost             | 1
+ Cheesecake       | 1
+ Türk Kahvesi     | 2
+ Club Sandviç     | 1
+ Latte            | 1
+(25 rows)
+
+--Q6: Telefon numarası kayıtlı olmayan müşterileri listele.
+ customer_id |   full_name   | department | phone
+-------------+---------------+-----------+-------
+ 2           | Mehmet Kaya   | YBS       | NULL
+ 4           | Can Arslan   | İşletme   | NULL
+ 7           | Selin Öztürk | Psikoloji | NULL
+(3 rows)
