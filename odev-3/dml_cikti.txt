@@ -1,0 +1,33 @@
+DML DENEYİ 
+
+1. GÜNCELLEME ÖNCESİ FİYATLAR
+
+ product_id |      name      | price
+------------+----------------+-------
+          1 | Çay            |    20
+          2 | Türk Kahvesi   |    35
+          3 | Latte          |    60
+(3 rows)
+
+2. UPDATE SONRASI FİYATLAR
+
+ product_id |      name      | price
+------------+----------------+-------
+          1 | Çay            |    25
+          2 | Türk Kahvesi   |    40
+          3 | Latte          |    65
+(3 rows)
+
+
+3. HATALI INSERT ÇIKTISI (BEKLENEN)
+
+ERROR: insert or update on table "order_item" violates foreign key constraint
+
+4. ROLLBACK SONRASI FİYATLAR
+  
+ product_id |      name      | price
+------------+----------------+-------
+          1 | Çay            |    20
+          2 | Türk Kahvesi   |    35
+          3 | Latte          |    60
+(3 rows)
